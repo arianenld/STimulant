@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DemoScript.cs" />
+     <Compile Include="Assets\DrugParticles.cs" />
      <Compile Include="Assets\SampleScript.cs" />
      <Compile Include="Assets\SphereController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
