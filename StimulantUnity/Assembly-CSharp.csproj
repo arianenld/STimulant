@@ -53,10 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DemoScript.cs" />
-     <Compile Include="Assets\DrugParticles.cs" />
-     <Compile Include="Assets\SampleScript.cs" />
-     <Compile Include="Assets\SphereController.cs" />
+     <Compile Include="Assets\Scripts\DrugParticles.cs" />
+     <Compile Include="Assets\Scripts\SampleScript.cs" />
+     <Compile Include="Assets\Scripts\SphereController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
