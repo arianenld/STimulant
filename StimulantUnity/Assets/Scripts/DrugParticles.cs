@@ -107,25 +107,7 @@ public class DrugParticles : MonoBehaviour {
             var y = Random.Range(-.3f, 5f); // sphere altitude relative to terrain below
             var z = Random.Range(-.41f, 5f);
 
-            // now send a ray down terrain to adjust Y according terrain below
-           /*var height = .2f; // should be higher than highest terrain altitude
-            var origin = new Vector3(x, height, z);
-            var ray = new Ray(origin, Vector3.down);
-            RaycastHit hit;
-            var maxDistance = 20000.0f;
-            var nameToLayer = LayerMask.NameToLayer("Plane");
-            var layerMask = 1 << nameToLayer;
-            if (Physics.Raycast(ray, out hit, maxDistance, layerMask))
-            {
-                var distance = hit.distance;
-                y = height - distance + y; // adjust
-            }
-            else
-            {
-                Debug.LogWarning("Terrain not hit, using default height !");
-            }*/
-
-            // place !
+           
             o.transform.localScale = new Vector3(.5f, .5f, .5f);
             o.transform.position = new Vector3(x, y, z);
         }

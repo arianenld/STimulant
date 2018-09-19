@@ -8,6 +8,7 @@ TagManager:
   - Drug
   - Terrain
   - Plane
+  - Panel
   layers:
   - Default
   - TransparentFX
