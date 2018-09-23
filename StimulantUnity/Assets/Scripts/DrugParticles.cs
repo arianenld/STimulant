@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DrugParticles : MonoBehaviour {
+    //PanelController pController;
 
-	public GameObject[] drugParticles;
+	//public gameObject head;
 
-    float timer = 0f;
-    float speed = 1f;
-    float delay;
+    public float timer;
+    public float speed;
+    public float delay;
 
 	// for tracking properties change
     private Vector3 _extents;
@@ -19,6 +20,8 @@ public class DrugParticles : MonoBehaviour {
     ///     How far to place spheres randomly.
     /// </summary>
     public Vector3 Extents;
+    public Vector3 gameObjectExtents;
+
 
     /// <summary>
     ///     How many spheres wanted.
@@ -27,15 +30,35 @@ public class DrugParticles : MonoBehaviour {
 
     public float SphereSize;
 
+    public float x;
+    public float y;
+    public float z;
+
+    public bool initialized = false;
+
+    
+
     void Start(){
+        //pController = new PanelController();
+        Initialized();
         SpawnSpheres();
-        delay = 10f;
+        delay = 7f;
+    }
+
+    void Initialized(){
+        gameObjectExtents = this.transform.position;
+        timer = 0f;
+        speed = 2f;
+        x = gameObjectExtents.x + 35;
+        y = gameObjectExtents.y - 15;
+        z = gameObjectExtents.z;
+        Extents = new Vector3(Mathf.Max(0.0f, x), Mathf.Max(0.0f, y), Mathf.Max(0.0f, z));
+        initialized = true;
+
     }
 
     private void OnValidate()
     {
-        // prevent wrong values to be entered
-        Extents = new Vector3(Mathf.Max(0.0f, Extents.x), Mathf.Max(0.0f, Extents.y), Mathf.Max(0.0f, Extents.z));
         SphereCount = 20;
         SphereSize = .5f;
     }
@@ -48,9 +71,13 @@ public class DrugParticles : MonoBehaviour {
     }
 
     void Update(){
-    
-        UpdateSpheres();              
-        //transform.Translate(1f, 0f, 0f);
+        if(PanelController.currentPanel == 7)
+            UpdateSpheres();
+
+            /*if(initialized){
+                Initialized();
+                SpawnSpheres();
+            }*/
 
     }
 
@@ -58,37 +85,31 @@ public class DrugParticles : MonoBehaviour {
     {
         timer += Time.deltaTime;
 
-        //if (Extents == _extents && SphereCount == _sphereCount && Mathf.Approximately(SphereSize, _sphereSize))
-            //return;
-
-        // cleanup
         var spheres = GameObject.FindGameObjectsWithTag("Drug");
 
         foreach (var t in spheres)
         {
             if(timer < delay){
                 float step = speed * Time.deltaTime;
-                //t.transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-                t.transform.Translate(step, 0f, 0f);
-                Debug.Log(t + " is moving");
-            
+                t.transform.Translate(-step, step, 0f);            
             }
         }
-
-
-
-        //var withTag = GameObject.FindWithTag("Plane");
         
-        
-
-        _extents = Extents;
-        _sphereCount = SphereCount;
-        _sphereSize = SphereSize;
+        if(timer >= 5f){
+            foreach(var t in spheres)
+                Destroy(t);
+            
+            timer = 0;
+            SpawnSpheres();
+        }
     }
 
     private void SpawnSpheres(){
+        float dx = x;
+        float dy = y;
+        float dz = z;
 
-        for (var i = 0; i < 20; i++)
+        for (var i = 0; i < 4; i++)
         {
             //var planePos = GameObject.Find("Plane").bounds;
             var o = GameObject.CreatePrimitive(PrimitiveType.Sphere);
@@ -103,13 +124,15 @@ public class DrugParticles : MonoBehaviour {
             newMaterial.color = color;
             gameObjectRenderer.material = newMaterial;
             // get random position
-            var x = Random.Range(-5f, 5f);
-            var y = Random.Range(-.3f, 5f); // sphere altitude relative to terrain below
-            var z = Random.Range(-.41f, 5f);
+            /*var x = Random.Range(-455f, -450f);
+            var y = Random.Range(-4.6f, -6.6f); // sphere altitude relative to terrain below
+            var z = Random.Range(-289.4f, -279.4f);*/
 
            
-            o.transform.localScale = new Vector3(.5f, .5f, .5f);
-            o.transform.position = new Vector3(x, y, z);
+            o.transform.localScale = new Vector3(2f, 2f, 2f);
+            o.transform.position = new Vector3(dx, dy, dz);
+            dx += 2f;
+            dy -= 1.8f;
         }
     }
 }

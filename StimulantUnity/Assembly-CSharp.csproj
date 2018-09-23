@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\PanelController.cs" />
      <Compile Include="Assets\Scripts\SampleScript.cs" />
      <Compile Include="Assets\Scripts\SphereController.cs" />
+     <Compile Include="Assets\Scripts\SyringeController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

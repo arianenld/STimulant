@@ -5,9 +5,11 @@ using UnityEngine;
 public class PanelController : MonoBehaviour {
 
 	public List<GameObject> panelList = new List<GameObject>();
-	public int currentPanel = 1;
+	public static int currentPanel;
 
 	void Awake () {
+		currentPanel = 1;
+
  		foreach(var obj in GameObject.FindGameObjectsWithTag("Panel")){
 			panelList.Add(obj);
 			print(obj.transform.name);
@@ -33,20 +35,24 @@ public class PanelController : MonoBehaviour {
 			else
 				panel.SetActive(false);
 		}
+
+		if(currentPanel != 7)
+			foreach(var drug in GameObject.FindGameObjectsWithTag("Drug"))
+				Destroy(drug);
 	}
 
 	public void PreviousPanel(){
-		this.currentPanel -= 1;
+		currentPanel -= 1;
 		this.EnablePanel();
 	}
 
 	public void NextPanel(){
-		this.currentPanel += 1;
+		currentPanel += 1;
 		this.EnablePanel();
 	}
 
 	public void GoToHome(){
-		this.currentPanel = 1;
+		currentPanel = 1;
 		this.EnablePanel();
 	}
 }

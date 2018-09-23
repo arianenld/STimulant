@@ -9,6 +9,7 @@ TagManager:
   - Terrain
   - Plane
   - Panel
+  - Syringe
   layers:
   - Default
   - TransparentFX
