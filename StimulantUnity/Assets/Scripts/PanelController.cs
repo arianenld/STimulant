@@ -39,6 +39,9 @@ public class PanelController : MonoBehaviour {
 		if(currentPanel != 7)
 			foreach(var drug in GameObject.FindGameObjectsWithTag("Drug"))
 				Destroy(drug);
+
+		if(currentPanel >= panelList.Count)
+			currentPanel = 0;
 	}
 
 	public void PreviousPanel(){
