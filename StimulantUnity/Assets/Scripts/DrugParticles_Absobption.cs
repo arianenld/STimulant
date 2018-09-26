@@ -47,8 +47,8 @@ public class DrugParticles_Absobption : MonoBehaviour {
         gameObjectExtents = this.transform.position;
         timer = 0f;
         speed = 3f;
-        x = gameObjectExtents.x + 35;
-        y = gameObjectExtents.y + 42;
+        x = gameObjectExtents.x - 10;
+        y = gameObjectExtents.y + 12;
         z = gameObjectExtents.z;
         Extents = new Vector3(Mathf.Max(0.0f, x), Mathf.Max(0.0f, y), Mathf.Max(0.0f, z));
         initialized = true;

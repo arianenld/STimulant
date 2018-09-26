@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/StoryBoard.unity
+- path: Assets/Scenes/StoryBoard2.unity
   isLoaded: 1
   isActive: 1
-- path: Assets/Scenes/InhalationScene.unity
-  isLoaded: 0
-  isActive: 0
