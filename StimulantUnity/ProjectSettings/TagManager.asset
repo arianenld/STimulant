@@ -10,6 +10,7 @@ TagManager:
   - Plane
   - Panel
   - Syringe
+  - OnOff
   layers:
   - Default
   - TransparentFX
