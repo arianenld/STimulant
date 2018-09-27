@@ -8,7 +8,7 @@ public class PanelController : MonoBehaviour {
 	public static int currentPanel;
 
 	void Awake () {
-		currentPanel = 1;
+		currentPanel = 4;
 		
  		foreach(var obj in GameObject.FindGameObjectsWithTag("Panel")){
 			panelList.Add(obj);

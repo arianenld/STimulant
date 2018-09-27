@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text;
+using System.IO;
+using System;
 
 public class Summary : MonoBehaviour {
 
@@ -16,7 +19,8 @@ public class Summary : MonoBehaviour {
 		FindGameObjects();
 		SetValues();
 		Display();
-		JsonSerialize();
+		ToJson();
+		ToCsv();
 	}
 
 	void FindGameObjects(){
@@ -40,7 +44,7 @@ public class Summary : MonoBehaviour {
 		drugNameField.GetComponent<Text>().text = drugName.ToString();
 	}
 
-	void JsonSerialize(){
+	void ToJson(){
 		Export exportObj = new Export();
 		exportObj.drug_name = this.drugName;
 		exportObj.amount_of_drugs = InputDetails.amount;
@@ -51,6 +55,19 @@ public class Summary : MonoBehaviour {
 
 		TextFile fileObj = new TextFile();
 		fileObj.WriteText(json);
+	}
+
+	void ToCsv(){
+		CsvFile csv = new CsvFile();
+		//var data = new List<dynamic>();
+		string[] data = new string[4];
+		data[0] = this.drugName;
+		data[1] = this.absorption;
+		data[2] = InputDetails.amount.ToString();
+		data[3] = this.time.ToString();
+
+		csv.WriteCsv(data);
+
 	}
 
 	float ComputeTime(){
