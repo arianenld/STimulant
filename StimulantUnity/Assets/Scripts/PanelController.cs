@@ -8,7 +8,7 @@ public class PanelController : MonoBehaviour {
 	public static int currentPanel;
 
 	void Awake () {
-		currentPanel = 4;
+		currentPanel = 1;
 		
  		foreach(var obj in GameObject.FindGameObjectsWithTag("Panel")){
 			panelList.Add(obj);
@@ -40,6 +40,9 @@ public class PanelController : MonoBehaviour {
 			foreach(var drug in GameObject.FindGameObjectsWithTag("Drug"))
 				Destroy(drug);
 
+		/*if(currentPanel == 4)
+			InputDetails.Instance.SetGameObjects();*/
+		
 		if(currentPanel >= panelList.Count)
 			currentPanel = 1;
 	}

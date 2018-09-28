@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Summary.cs" />
      <Compile Include="Assets\Scripts\SyringeController.cs" />
      <Compile Include="Assets\Scripts\TextFile.cs" />
+     <Compile Include="Assets\Scripts\Values.cs" />
      <None Include="Assets\Resources\Analytics.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

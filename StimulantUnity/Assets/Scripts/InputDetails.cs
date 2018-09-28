@@ -9,37 +9,63 @@ public class InputDetails : MonoBehaviour {
 	public static string drugName;
 	public static string absorptionType;
  	public static GameObject dropdownMenu;
+
+ 	public static InputDetails Instance;
     
 	int menuIndex;
 	string sValue;
 
 	GameObject drugDropDown, typeDropDown, amountInputField, button;
+
+	bool dropDown1, dropDown2;
+
+	Values val;
 	// Use this for initialization
-	void Start () {
+	/*public void Start () {
 		drugDropDown = GameObject.Find("DrugDropDown");
 		typeDropDown = GameObject.Find("TypeDropDown");
 		amountInputField = GameObject.Find("AmountInputField");
 		button = GameObject.FindWithTag("OnOff");
 
+	}*/
+
+	void Awake(){
+		val = new Values();
+		Instance = this;
+
 	}
 
+	/*public void SetGameObjects(){
+		Values val = new Values();
+		val.GetGameObjects();
+		drugDropDown = val.drugDropDown;
+		typeDropDown = val.typeDropDown;
+		amountInputField = val.amountInputField;
+		button = val.button;
+	}*/
+
 	public void Listen(){
+		/*amountInputField = val.GetGameObjects("amount");
 		var input = amountInputField.GetComponent<InputField>();
         var se = new InputField.SubmitEvent();
         se.AddListener(SetAmount);
-        input.onEndEdit = se;
+        input.onEndEdit = se;*/
 	}
 
-	private void SetAmount(string am)
-    {
+	public void SetAmount()
+    {    
+    	button = val.GetGameObjects("button");
+    	amountInputField = val.GetGameObjects("amount");
+    	string am = amountInputField.GetComponent<InputField>().text;
+
         if(am != "" && am != "0"){
 			amount = float.Parse(am);
-			button.SetActive(true);
+			button.GetComponent<Button>().interactable = true;
         }
 
 		else{
 			amount = 0;
-			button.SetActive(false);
+			button.GetComponent<Button>().interactable = false;
 
 		}
 
@@ -47,19 +73,19 @@ public class InputDetails : MonoBehaviour {
     }
 
 	public void SetDrug(){
-		dropdownMenu = drugDropDown;
+		dropdownMenu = val.GetGameObjects("drug");
 		drugName = GetValue();	
 		print("Drug name: " + drugName);
 	}
 
 	public void SetAbsorption(){
-		dropdownMenu = typeDropDown;
-
+		dropdownMenu = val.GetGameObjects("type");
 		absorptionType = GetValue();
 		print("Type: " + absorptionType);
 	}
 
 	private string GetValue(){
+		Debug.Log(dropdownMenu);
 		dropdownMenu.GetComponent<Dropdown>().RefreshShownValue();
 		int menuIndex = dropdownMenu.GetComponent<Dropdown> ().value;
 
@@ -69,5 +95,4 @@ public class InputDetails : MonoBehaviour {
 	   	Debug.Log(menuIndex);
 	    return sValue;
 	}
-	
 }

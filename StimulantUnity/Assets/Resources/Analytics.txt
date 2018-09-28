@@ -18,3 +18,9 @@
 {"drug_name":"Option B","absorption_type":"Option C","amount_of_drugs":0.0,"duration_in_body":0.0}
 {"drug_name":"Option C","absorption_type":"Option B","amount_of_drugs":0.0,"duration_in_body":0.0}
 {"drug_name":"Option C","absorption_type":"Option B","amount_of_drugs":53.0,"duration_in_body":0.0}
+{"drug_name":"Option C","absorption_type":"Option B","amount_of_drugs":0.0,"duration_in_body":0.0}
+{"drug_name":"Option C","absorption_type":"Option C","amount_of_drugs":0.0,"duration_in_body":0.0}
+{"drug_name":"Option B","absorption_type":"Option C","amount_of_drugs":23.0,"duration_in_body":0.0}
+{"drug_name":"Option B","absorption_type":"Option C","amount_of_drugs":23.0,"duration_in_body":0.0}
+{"drug_name":"Option C","absorption_type":"Option B","amount_of_drugs":0.0,"duration_in_body":0.0}
+{"drug_name":"Option B","absorption_type":"Option C","amount_of_drugs":13.0,"duration_in_body":0.0}

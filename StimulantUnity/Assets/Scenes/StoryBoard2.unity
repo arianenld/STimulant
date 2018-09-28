@@ -3049,8 +3049,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326512808}
-  - component: {fileID: 326512807}
   - component: {fileID: 326512809}
+  - component: {fileID: 326512807}
   - component: {fileID: 326512810}
   m_Layer: 0
   m_Name: SimulationManager
@@ -4046,7 +4046,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 326512809}
-        m_MethodName: Listen
+        m_MethodName: SetAmount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
