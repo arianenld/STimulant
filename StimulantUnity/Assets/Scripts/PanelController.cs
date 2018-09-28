@@ -40,8 +40,10 @@ public class PanelController : MonoBehaviour {
 			foreach(var drug in GameObject.FindGameObjectsWithTag("Drug"))
 				Destroy(drug);
 
-		/*if(currentPanel == 4)
-			InputDetails.Instance.SetGameObjects();*/
+		if(currentPanel == 4){
+			InputDetails.Instance.SetDrug();
+			InputDetails.Instance.SetAbsorption();
+		}
 		
 		if(currentPanel >= panelList.Count)
 			currentPanel = 1;
