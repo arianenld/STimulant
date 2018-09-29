@@ -67,8 +67,10 @@
      <Compile Include="Assets\Scripts\SyringeController.cs" />
      <Compile Include="Assets\Scripts\TextFile.cs" />
      <Compile Include="Assets\Scripts\Values.cs" />
+     <None Include="Assets\ColorfulButtons\Credits.txt" />
      <None Include="Assets\Resources\Analytics.txt" />
  <Reference Include="UnityEditor.StandardEvents">
+<<<<<<< HEAD
 <<<<<<< HEAD
  <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
@@ -82,16 +84,23 @@
  <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
 =======
  <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+=======
+ <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+>>>>>>> b3b3c0c10a0a34f2b8abcdc707cd3648a992b52f
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
+<<<<<<< HEAD
  <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
 >>>>>>> ui
+=======
+ <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+>>>>>>> b3b3c0c10a0a34f2b8abcdc707cd3648a992b52f
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
