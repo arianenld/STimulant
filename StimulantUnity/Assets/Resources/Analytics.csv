@@ -16,4 +16,13 @@ Option C,Option B,13,0
 Option B,Option C,12,0
 Option B,Option A,13,0
 Option A,Option A,3,0
+<<<<<<< HEAD
 Option C,Option B,23,0
+=======
+Option A,Option A,0.5,0
+Option A,Option A,5,0
+Option A,Option A,0.3,0
+Option A,Option A,0.3,0
+Option A,Option A,0.3,0
+Option A,Option A,0.3,0
+>>>>>>> ui
