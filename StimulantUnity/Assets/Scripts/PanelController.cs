@@ -8,7 +8,9 @@ public class PanelController : MonoBehaviour {
 	public static int currentPanel;
 
 	void Awake () {
-		currentPanel = 1;
+		Waypoints wp = new Waypoints();
+		wp.SetWaypoints();
+		currentPanel = 10;
 		
  		foreach(var obj in GameObject.FindGameObjectsWithTag("Panel")){
 			panelList.Add(obj);
@@ -45,8 +47,8 @@ public class PanelController : MonoBehaviour {
 			InputDetails.Instance.SetAbsorption();
 		}
 		
-		if(currentPanel >= panelList.Count)
-			currentPanel = 1;
+		/*if(currentPanel > panelList.Count)
+			currentPanel = 1;*/
 	}
 
 	public void PreviousPanel(){

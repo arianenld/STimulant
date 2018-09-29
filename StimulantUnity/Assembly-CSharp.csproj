@@ -56,17 +56,23 @@
      <Compile Include="Assets\AcornGame-adjustable-character-spacing-e2458bc56c15\LetterSpacing.cs" />
      <Compile Include="Assets\Scripts\CsvFile.cs" />
      <Compile Include="Assets\Scripts\DrugParticles_Absobption.cs" />
+     <Compile Include="Assets\Scripts\DrugParticles_Brain.cs" />
      <Compile Include="Assets\Scripts\DrugParticles_Inhalation.cs" />
+     <Compile Include="Assets\Scripts\DrugParticles_Urinary.cs" />
      <Compile Include="Assets\Scripts\Export.cs" />
      <Compile Include="Assets\Scripts\ForButtons.cs" />
+     <Compile Include="Assets\Scripts\hehe.cs" />
      <Compile Include="Assets\Scripts\InputDetails.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\PanelController.cs" />
+     <Compile Include="Assets\Scripts\SampleMovement.cs" />
      <Compile Include="Assets\Scripts\SampleScript.cs" />
      <Compile Include="Assets\Scripts\SphereController.cs" />
      <Compile Include="Assets\Scripts\Summary.cs" />
      <Compile Include="Assets\Scripts\SyringeController.cs" />
      <Compile Include="Assets\Scripts\TextFile.cs" />
      <Compile Include="Assets\Scripts\Values.cs" />
+     <Compile Include="Assets\Scripts\Waypoints.cs" />
      <None Include="Assets\Resources\Analytics.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
