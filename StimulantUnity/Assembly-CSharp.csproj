@@ -54,14 +54,22 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AcornGame-adjustable-character-spacing-e2458bc56c15\LetterSpacing.cs" />
+     <Compile Include="Assets\Scripts\CsvFile.cs" />
      <Compile Include="Assets\Scripts\DrugParticles_Absobption.cs" />
      <Compile Include="Assets\Scripts\DrugParticles_Inhalation.cs" />
+     <Compile Include="Assets\Scripts\Export.cs" />
      <Compile Include="Assets\Scripts\ForButtons.cs" />
+     <Compile Include="Assets\Scripts\InputDetails.cs" />
      <Compile Include="Assets\Scripts\PanelController.cs" />
      <Compile Include="Assets\Scripts\SampleScript.cs" />
      <Compile Include="Assets\Scripts\SphereController.cs" />
+     <Compile Include="Assets\Scripts\Summary.cs" />
      <Compile Include="Assets\Scripts\SyringeController.cs" />
+     <Compile Include="Assets\Scripts\TextFile.cs" />
+     <Compile Include="Assets\Scripts\Values.cs" />
+     <None Include="Assets\Resources\Analytics.txt" />
  <Reference Include="UnityEditor.StandardEvents">
+<<<<<<< HEAD
  <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
@@ -72,6 +80,18 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Ariane/Desktop/Ariane/School/4TH YEAR 1ST SEM/MODELSIM/Final Project/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+=======
+ <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>D:/STimulant/StimulantUnity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+>>>>>>> ui
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

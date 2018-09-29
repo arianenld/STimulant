@@ -1,0 +1,18 @@
+Name, Absorption Type, Amount, Duration
+Option C,Option B,45,0
+Option C,Option B,15,0
+Option C,Option B,14,0
+Option B,Option C,0,0
+Option B,Option C,0,0
+Option C,Option B,0,0
+Option C,Option B,53,0
+Option C,Option B,0,0
+Option C,Option C,0,0
+Option B,Option C,23,0
+Option B,Option C,23,0
+Option C,Option B,0,0
+Option B,Option C,13,0
+Option C,Option B,13,0
+Option B,Option C,12,0
+Option B,Option A,13,0
+Option A,Option A,3,0
